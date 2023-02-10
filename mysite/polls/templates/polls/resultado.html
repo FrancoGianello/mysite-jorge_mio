@@ -1,0 +1,12 @@
+<h1>{{ encuesta.question_text }}</h1>
+
+<div class="cosa">
+    <ul>
+        {% for value in encuesta.options.all %}
+            <li>{{ value.choice_text }} ({{ value.votes }})</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<a href="{% url 'polls:index' %}">Inicio</a>
+<a href="{% url 'polls:detalle' encuesta.id %}">Volver a votar</a>
