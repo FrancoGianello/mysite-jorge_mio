@@ -1,7 +1,7 @@
 <h1>Listado</h1>
-{% if latest_question_list %}
+{% if ultimasNoticias %}
     <ul>
-    {% for question in latest_question_list %}
+    {% for question in ultimasNoticias %}
         <li><a href="{% url 'polls:detalle' question.id %}">{{ question.question_text }}</a></li>
     {% endfor %}
     </ul>
